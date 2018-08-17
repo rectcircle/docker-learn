@@ -1,0 +1,6 @@
+version: '3' 
+
+services:
+  webapp: 
+    build: .
+    command: echo "hello world" # 覆盖容器启动后默认执行的命令

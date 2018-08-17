@@ -1,0 +1,21 @@
+version: '3' 
+
+services:
+  webapp: 
+    build: ./dir # 自动在此目录寻找Dockerfile，并将此目录作为构建路径
+
+
+---
+
+version: '3' 
+
+services:
+  webapp: 
+    build: # 更详细的配置
+      context: ./dir 
+      dockerfile: Dockerfile-alternate 
+      args: # 指定构建时环境变量
+        buildno: 1
+      cache_from: # 指定镜像缓存
+        - alpine:latest 
+        - corp/web_app:3.14

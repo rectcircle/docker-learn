@@ -1,0 +1,12 @@
+version: "3" # 版本
+
+services: # 定义服务
+  # 服务1：web服务
+  web: #服务名
+    build: . # 构建路径 等价于docker build的 <上下文路径/URL/-> 参数
+    ports:   # 端口映射 等价于docker run的 -p 
+      - "5000:5000"
+
+  # 服务2：redis服务
+  redis: 
+    image: "redis:alpine"

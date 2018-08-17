@@ -1,0 +1,6 @@
+version: '3' 
+
+services:
+  webapp: 
+    image: ubuntu
+    stop_signal: SIGUSR1 # 设置另一个信号来停止容器。在默认情况下使用的是 SIGTERM 停止容器。

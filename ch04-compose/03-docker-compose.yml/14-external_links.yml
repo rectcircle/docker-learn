@@ -1,0 +1,10 @@
+version: '3' 
+
+services:
+  webapp: 
+    build: .
+    external_links: # 注意：不建议使用该指令。
+    # 链接到 docker-compose.yml 外部的容器，甚至并非 Compose 管理的外部容器。
+      - redis_1 
+      - project_db_1:mysql 
+      - project_db_1:postgresql

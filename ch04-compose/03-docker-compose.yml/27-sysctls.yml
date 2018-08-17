@@ -1,0 +1,11 @@
+version: '3' 
+
+services:
+  webapp: 
+    image: ubuntu
+    sysctls: # 配置容器内核参数。
+      net.core.somaxconn: 1024 
+      net.ipv4.tcp_syncookies: 0
+    # sysctls: 
+    #   - net.core.somaxconn=1024 
+    #   - net.ipv4.tcp_syncookies=0

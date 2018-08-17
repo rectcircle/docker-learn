@@ -1,0 +1,9 @@
+version: '3' 
+
+services:
+  webapp: 
+    image: ubuntu
+    # 指定容器模板标签（label）机制的默认属性（用户、角色、类型、级别等）。例如配置标签 的用户名和角色名。
+    security_opt: 
+      - label:user:USER 
+      - label:role:ROLE

@@ -1,0 +1,9 @@
+version: '3' 
+
+services:
+  webapp: 
+    build: .
+    cap_add:  # 让容器拥有所有能力可以指定为：
+      - ALL
+    cap_drop: # 去掉 NET_ADMIN 能力可以指定为
+      - NET_ADMIN

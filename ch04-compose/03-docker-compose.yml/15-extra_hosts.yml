@@ -1,0 +1,11 @@
+version: '3' 
+
+services:
+  webapp: 
+    build: .
+    extra_hosts:  # 类似 Docker 中的 --add-host 参数，指定额外的 host 名称映射信息
+    # 会在启动后的服务容器中 /etc/hosts 文件中添加如下两条条目。
+    # 8.8.8.8 googledns 
+    # 52.1.157.61 dockerhub
+      - "googledns:8.8.8.8" 
+      - "dockerhub:52.1.157.61"

@@ -1,0 +1,17 @@
+version: '3' 
+
+services:
+  webapp: 
+    image: ubuntu
+    network_mode: "bridge"  # 设置网络模式。使用和 docker run 的 --network 参数一样的值
+    # network_mode: "host" 
+    # network_mode: "none" 
+    # network_mode: "service:[service name]" 
+    # network_mode: "container:[container name/id]"
+    networks:  # 配置容器连接的网络
+      - some-network 
+      - other-network
+
+networks: 
+  some-network: 
+  other-network:

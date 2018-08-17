@@ -1,0 +1,14 @@
+version: '3' 
+
+services:
+  webapp: 
+    build: .
+    depends_on: # 解决容器的依赖、启动先后的问题。以下例子中会先启动 redis db 再启动 web
+      - db 
+      - redis
+      # 注意： web 服务不会等待 redis db 「完全启动」之后才启动。
+
+  redis: 
+    image: redis
+  db: 
+    image: postgres

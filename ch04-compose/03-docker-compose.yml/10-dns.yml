@@ -1,0 +1,13 @@
+version: '3' 
+
+services:
+  webapp: 
+    build: .
+    dns: 8.8.8.8 # 自定义 DNS 服务器。可以是一个值，也可以是一个列表
+    # dns: 
+    #   - 8.8.8.8 
+    #   - 114.114.114.114
+    dns_search: example.com # 配置 DNS 搜索域。可以是一个值，也可以是一个列表
+    # dns_search: 
+    #   - domain1.example.com 
+    #   - domain2.example.com

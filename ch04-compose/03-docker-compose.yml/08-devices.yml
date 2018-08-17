@@ -1,0 +1,7 @@
+version: '3' 
+
+services:
+  webapp: 
+    build: .
+    devices: # 指定设备映射关系
+      - "/dev/ttyUSB1:/dev/ttyUSB0"

@@ -1,0 +1,6 @@
+version: '3' 
+
+services:
+  webapp: 
+    image: ubuntu
+    pid: "host" # 跟主机系统共享进程命名空间。打开该选项的容器之间，以及容器和宿主机系统之间可以通 过进程 ID 来相互访问和操作。

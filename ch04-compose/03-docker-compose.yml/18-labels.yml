@@ -1,0 +1,9 @@
+version: '3' 
+
+services:
+  webapp: 
+    image: ubuntu
+    labels: 
+      com.startupteam.description: "webapp for a startup team" 
+      com.startupteam.department: "devops department" 
+      com.startupteam.release: "rc3 for v1.0"

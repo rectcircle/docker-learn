@@ -1,0 +1,7 @@
+version: '3' 
+
+services:
+  webapp: 
+    image: ubuntu  # 指定为镜像名称或镜像 ID。如果镜像在本地不存在， Compose 将会尝试拉去这个镜像。
+    # image: orchardup/postgresql 
+    # image: a4bc65fd

@@ -1,0 +1,6 @@
+version: '3' 
+
+services:
+  webapp: 
+    build: .
+    configs:   # 仅用于 Swarm mode

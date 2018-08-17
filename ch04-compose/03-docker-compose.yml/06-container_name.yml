@@ -1,0 +1,7 @@
+version: '3' 
+
+services:
+  webapp: 
+    build: .
+    container_name: docker-web-container # 指定容器名称。默认将会使用 项目名称_服务名称_序号 这样的格式。
+    # 注意: 指定容器名称后，该服务将无法进行扩展（scale），因为 Docker 不允许多个容器 具有相同的名称。

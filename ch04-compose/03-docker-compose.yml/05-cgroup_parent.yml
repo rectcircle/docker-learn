@@ -1,0 +1,6 @@
+version: '3' 
+
+services:
+  webapp: 
+    build: .
+    cgroup_parent: cgroups_1  #指定父 cgroup 组，意味着将继承该组的资源限制。 例如，创建了一个 cgroup 组名称为 cgroups_1 。

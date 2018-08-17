@@ -1,0 +1,9 @@
+version: '3' 
+
+services:
+  webapp: 
+    build: .
+    tmpfs: /run  # 挂载一个 tmpfs 文件系统到容器。
+    # tmpfs: 
+    #   - /run 
+    #   - /tmp

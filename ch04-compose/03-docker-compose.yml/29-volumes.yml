@@ -1,0 +1,10 @@
+version: '3' 
+
+services:
+  webapp: 
+    image: ubuntu
+    volumes:  # 数据卷所挂载路径设置。可以设置宿主机路径 （ HOST:CONTAINER ） 或加上访问模式 （ HOST:CONTAINER:ro ）。
+    # 该指令中路径支持相对路径。
+      - /var/lib/mysql 
+      - cache/:/tmp/cache 
+      - ~/configs:/etc/configs/:ro
